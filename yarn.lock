@@ -991,6 +991,13 @@
     core-js "^2.5.3"
     regenerator-runtime "^0.11.1"
 
+"@babel/runtime@^7.12.5":
+  version "7.12.5"
+  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.12.5.tgz#410e7e487441e1b360c29be715d870d9b985882e"
+  integrity sha512-plcc+hbExy3McchJCEQG3knOsuh3HH+Prx1P6cLIkET/0dLuQDEnrT+s27Axgc9bqfsmNUNHfscgMUdBpC9xfg==
+  dependencies:
+    regenerator-runtime "^0.13.4"
+
 "@babel/runtime@^7.4.0":
   version "7.7.4"
   resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.7.4.tgz#b23a856751e4bf099262f867767889c0e3fe175b"
@@ -2850,14 +2857,19 @@
   resolved "https://registry.yarnpkg.com/@yarnpkg/lockfile/-/lockfile-1.1.0.tgz#e77a97fbd345b76d83245edcd17d393b1b41fb31"
   integrity sha512-GpSwvyXOcOOlV70vbnzjj4fW5xW/FdUF6nQEt1ENy7m4ZCczi1+/buVUPAqmGfqznsORNFzUMjctTIp8a9tuCQ==
 
-"@zxing/library@^0.8.0":
-  version "0.8.0"
-  resolved "https://registry.yarnpkg.com/@zxing/library/-/library-0.8.0.tgz#accd9f3cd5c06fa40a95c2c1f61398c41548a9e3"
-  integrity sha512-D7oopukr7cJ0Va01Er2zXiSPXvmvc6D1PpOq/THRvd/57yEsBs+setRsiDo7tSRnYHcw7FrRZSZ7rwyzNSLJeA==
+"@zxing/library@^0.18.3":
+  version "0.18.3"
+  resolved "https://registry.yarnpkg.com/@zxing/library/-/library-0.18.3.tgz#50f20703cf3b7d357bd8801b23f27f24aa1f5e4d"
+  integrity sha512-7ny4JjUu2UfIiuyjewxeRZViXJ8GsSOoNZ+o6o0AdPvUQlaISdsGnIUVGDviJerEYeT1MKhaL7jUtjdYs3KO/Q==
   dependencies:
-    ts-custom-error "^2.2.1"
+    ts-custom-error "^3.0.0"
   optionalDependencies:
-    text-encoding "^0.6.4"
+    "@zxing/text-encoding" "~0.9.0"
+
+"@zxing/text-encoding@~0.9.0":
+  version "0.9.0"
+  resolved "https://registry.yarnpkg.com/@zxing/text-encoding/-/text-encoding-0.9.0.tgz#fb50ffabc6c7c66a0c96b4c03e3d9be74864b70b"
+  integrity sha512-U/4aVJ2mxI0aDNI8Uq0wEhMgY+u4CNtEb0om3+y3+niDAsoTCOB33UF0sxpzqzdqXLqmvc+vZyAt4O8pPdfkwA==
 
 JSONStream@^1.0.3:
   version "1.3.2"
@@ -7084,9 +7096,6 @@ config-chain@^1.1.11:
   version "1.1.12"
   resolved "https://registry.yarnpkg.com/config-chain/-/config-chain-1.1.12.tgz#0fde8d091200eb5e808caf25fe618c02f48e4efa"
   integrity sha512-a1eOIcu8+7lUInge4Rpf/n4Krkf3Dd9lqhljRzII1/Zno/kRtUWnznPO3jOKBmTEktkt3fkxisUcivoj0ebzoA==
-  dependencies:
-    ini "^1.3.4"
-    proto-list "~1.2.1"
 
 configstore@^3.0.0:
   version "3.1.2"
@@ -10333,17 +10342,16 @@ eth-simple-keyring@^3.5.0:
     events "^1.1.1"
     xtend "^4.0.1"
 
-eth-trezor-keyring@^0.4.0:
-  version "0.4.0"
-  resolved "https://registry.yarnpkg.com/eth-trezor-keyring/-/eth-trezor-keyring-0.4.0.tgz#f59c210f95aaf3d7321ae69d2b87a3b8db96a828"
-  integrity sha512-7F+C1ztxZStLzmG6r/2/MxjSuxw0aU9T26unJ03fQslktKG9izP+dU2IAJUnWxnyej2ZkfcgcH9M1t32LFbK2A==
+eth-trezor-keyring@^0.5.0:
+  version "0.5.1"
+  resolved "https://registry.yarnpkg.com/eth-trezor-keyring/-/eth-trezor-keyring-0.5.1.tgz#71e93068f1b97b914a78c0defbbdbea55c6773b1"
+  integrity sha512-Pxy1l6l5bq6w11/JYsTzbPeJUT4SvhbmNlBXDE8q7pDzfmndPomZ+xWlD99YzgPOSP8qTmJ02GewGrCyCAxHHg==
   dependencies:
     eth-sig-util "^1.4.2"
     ethereumjs-tx "^1.3.4"
     ethereumjs-util "^5.1.5"
-    events "^2.0.0"
     hdkey "0.8.0"
-    trezor-connect "^7.0.1"
+    trezor-connect "^8.1.19-extended"
 
 eth-tx-summary@^3.1.2:
   version "3.2.4"
@@ -10974,6 +10982,11 @@ events@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/events/-/events-3.0.0.tgz#9a0a0dfaf62893d92b875b8f2698ca4114973e88"
   integrity sha512-Dc381HFWJzEOhQ+d8pkNon++bk9h6cdAoAj4iE6Q4y6xgTzySWXlKn05/TVNpjnfRqi/X0EpJEJohPjNI3zpVA==
+
+events@^3.2.0:
+  version "3.2.0"
+  resolved "https://registry.yarnpkg.com/events/-/events-3.2.0.tgz#93b87c18f8efcd4202a461aec4dfc0556b639379"
+  integrity sha512-/46HWwbfCX2xTawVfkKLGxMifJYQBWMwY1mjywRtb4c9x8l5NP3KoJtnIOiL1hfdRkIuYhETxQlo62IF8tcnlg==
 
 eventsource@^1.0.7:
   version "1.0.7"
@@ -12247,15 +12260,15 @@ functions-have-names@^1.1.1:
   resolved "https://registry.yarnpkg.com/functions-have-names/-/functions-have-names-1.2.0.tgz#83da7583e4ea0c9ac5ff530f73394b033e0bf77d"
   integrity sha512-zKXyzksTeaCSw5wIX79iCA40YAa6CJMJgNg9wdkU/ERBrIdPSimPICYiLp65lRbSBqtiHql/HZfS2DyI/AH6tQ==
 
-fuse.js@^3.2.0:
-  version "3.2.0"
-  resolved "https://registry.yarnpkg.com/fuse.js/-/fuse.js-3.2.0.tgz#f0448e8069855bf2a3e683cdc1d320e7e2a07ef4"
-  integrity sha1-8ESOgGmFW/Kj5oPNwdMg5+KgfvQ=
-
 fuse.js@^3.4.6:
   version "3.4.6"
   resolved "https://registry.yarnpkg.com/fuse.js/-/fuse.js-3.4.6.tgz#545c3411fed88bf2e27c457cab6e73e7af697a45"
   integrity sha512-H6aJY4UpLFwxj1+5nAvufom5b2BT2v45P1MkPvdGIK8fWjQx/7o6tTT1+ALV0yawQvbmvCF0ufl2et8eJ7v7Cg==
+
+fuse.js@^3.6.1:
+  version "3.6.1"
+  resolved "https://registry.yarnpkg.com/fuse.js/-/fuse.js-3.6.1.tgz#7de85fdd6e1b3377c23ce010892656385fd9b10c"
+  integrity sha512-hT9yh/tiinkmirKrlv4KWOjztdoZo1mx9Qh4KvWqC7isoXwdUY3PNWUxceF4/qO9R6riA2C29jdTOeQOIROjgw==
 
 gaba@^1.9.3:
   version "1.11.0"
@@ -22542,10 +22555,10 @@ react-hotkeys@2.0.0:
   dependencies:
     prop-types "^15.6.1"
 
-react-idle-timer@^4.2.5:
-  version "4.2.5"
-  resolved "https://registry.yarnpkg.com/react-idle-timer/-/react-idle-timer-4.2.5.tgz#eb7d6e1b318f7755b5e0ee810254a8e95a2271b7"
-  integrity sha512-8B/OwjG8E/DTx1fHYKTpZ4cnCbL9+LOc5I9t8SYe8tbEkP14KChiYg0xPIuyRpO33wUZHcgmQl93CVePaDhmRA==
+react-idle-timer@^4.5.0:
+  version "4.5.0"
+  resolved "https://registry.yarnpkg.com/react-idle-timer/-/react-idle-timer-4.5.0.tgz#7fd1d63763839e8b534c81755631ebc3c3bc5d07"
+  integrity sha512-R6V3eErt+eCDjEkgh5s4bPEMKIEcYsppmfyjhhKrs3D8qxGMkv38zrJHlvkSU9ndtQFBh6eyGkDa45NMBv8Lnw==
 
 react-input-autosize@^2.1.0:
   version "2.1.2"
@@ -26429,11 +26442,6 @@ testem@^2.16.0:
     tmp "0.0.33"
     xmldom "^0.1.19"
 
-text-encoding@^0.6.4:
-  version "0.6.4"
-  resolved "https://registry.yarnpkg.com/text-encoding/-/text-encoding-0.6.4.tgz#e399a982257a276dae428bb92845cb71bdc26d19"
-  integrity sha1-45mpgiV6J22uQou5KEXLcb3CbRk=
-
 text-table@0.2.0, text-table@^0.2.0, text-table@~0.2.0:
   version "0.2.0"
   resolved "https://registry.yarnpkg.com/text-table/-/text-table-0.2.0.tgz#7f5ee823ae805207c00af2df4a84ec3fcfa570b4"
@@ -26797,14 +26805,14 @@ tree-kill@^1.1.0, tree-kill@^1.2.2:
   resolved "https://registry.yarnpkg.com/tree-kill/-/tree-kill-1.2.2.tgz#4ca09a9092c88b73a7cdc5e8a01b507b0790a0cc"
   integrity sha512-L0Orpi8qGpRG//Nd+H90vFB+3iHnue1zSSGmNOOCh1GLJ7rUKVwV2HvijphGQS2UmhUZewS9VgvxYIdgr+fG1A==
 
-trezor-connect@^7.0.1:
-  version "7.0.3"
-  resolved "https://registry.yarnpkg.com/trezor-connect/-/trezor-connect-7.0.3.tgz#70c4bc26c0966e794fc280a12c1acc9fef88864f"
-  integrity sha512-1Y1ajCDF8dC5d2yrCUmVkNqXeOlucamQ6j6Ko7kaqNdge3g9KZ+O48jUwP/eGzei8oUvPZUHd7o4OhDHTlpLCw==
+trezor-connect@^8.1.19-extended:
+  version "8.1.19"
+  resolved "https://registry.yarnpkg.com/trezor-connect/-/trezor-connect-8.1.19.tgz#89cab494fa727f7f4c07de50405a24063e9622d5"
+  integrity sha512-JU4qTkOhvq9EFdsbcNnECN9b13A7dFaPJiU4YAB9+zmlPHUjtswsSQN60aFR08pAovNVjPN5YbYuWYWYHVy/4w==
   dependencies:
-    "@babel/runtime" "^7.3.1"
-    events "^3.0.0"
-    whatwg-fetch "^3.0.0"
+    "@babel/runtime" "^7.12.5"
+    events "^3.2.0"
+    whatwg-fetch "^3.5.0"
 
 trim-newlines@^1.0.0:
   version "1.0.0"
@@ -26857,10 +26865,10 @@ truncate-utf8-bytes@^1.0.0:
   dependencies:
     utf8-byte-length "^1.0.1"
 
-ts-custom-error@^2.2.1:
-  version "2.2.1"
-  resolved "https://registry.yarnpkg.com/ts-custom-error/-/ts-custom-error-2.2.1.tgz#47086fbc34df5c7c2d4fba8c92d8767662066951"
-  integrity sha512-lHKZtU+PXkVuap6nlFZybIAFLUO8B3jbCs1VynBL8AUSAHfeG6HpztcBTDRp5I+fN5820N9kGg+eTIvr+le2yg==
+ts-custom-error@^3.0.0:
+  version "3.2.0"
+  resolved "https://registry.yarnpkg.com/ts-custom-error/-/ts-custom-error-3.2.0.tgz#ff8f80a3812bab9dc448536312da52dce1b720fb"
+  integrity sha512-cBvC2QjtvJ9JfWLvstVnI45Y46Y5dMxIaG1TDMGAD/R87hpvqFL+7LhvUDhnRCfOnx/xitollFWWvUKKKhbN0A==
 
 ts-dedent@^1.1.0:
   version "1.1.1"
@@ -28339,10 +28347,10 @@ whatwg-fetch@>=0.10.0:
   resolved "https://registry.yarnpkg.com/whatwg-fetch/-/whatwg-fetch-2.0.3.tgz#9c84ec2dcf68187ff00bc64e1274b442176e1c84"
   integrity sha1-nITsLc9oGH/wC8ZOEnS0QhduHIQ=
 
-whatwg-fetch@^3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/whatwg-fetch/-/whatwg-fetch-3.0.0.tgz#fc804e458cc460009b1a2b966bc8817d2578aefb"
-  integrity sha512-9GSJUgz1D4MfyKU7KRqwOjXCXTqWdFNvEr7eUBYchQiVc744mqK/MzXPNR2WsPkmkOa4ywfg8C2n8h+13Bey1Q==
+whatwg-fetch@^3.5.0:
+  version "3.5.0"
+  resolved "https://registry.yarnpkg.com/whatwg-fetch/-/whatwg-fetch-3.5.0.tgz#605a2cd0a7146e5db141e29d1c62ab84c0c4c868"
+  integrity sha512-jXkLtsR42xhXg7akoDKvKWE40eJeI+2KZqcp2h3NsOrRnDvtWX36KcKl30dy+hxECivdk2BVUHVNrPtoMBUx6A==
 
 whatwg-mimetype@^2.1.0, whatwg-mimetype@^2.2.0:
   version "2.3.0"
