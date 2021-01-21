@@ -82,8 +82,6 @@
     "@popperjs/core": "^2.4.0",
     "@reduxjs/toolkit": "^1.5.0",
     "@sentry/browser": "^5.11.1",
-    "@sentry/integrations": "^5.11.1",
-    "@zxing/library": "^0.18.3",
     "abi-decoder": "^1.2.0",
     "abortcontroller-polyfill": "^1.3.0",
     "await-semaphore": "^0.1.1",
